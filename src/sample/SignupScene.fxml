@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+<GridPane xmlns:fx="http://javafx.com/fxml"
+          fx:controller="sample.SignupController"
+          alignment="TOP_LEFT" hgap="10" vgap="10">
+    <padding><Insets top="25" right="100" bottom="25" left="200"/></padding>
+
+    <Label text="User Name"
+           GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+    <TextField fx:id="usernameField"
+               GridPane.rowIndex="1" GridPane.columnIndex="2"/>
+    <Text text=""
+          GridPane.rowIndex="1" GridPane.columnIndex="3"/>
+
+    <Label text="Password"
+           GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+    <PasswordField fx:id="passwordField" onKeyReleased="#passwordLength"
+               GridPane.rowIndex="2" GridPane.columnIndex="2"/>
+    <Text text="" fx:id="passwordText"
+          GridPane.rowIndex="2" GridPane.columnIndex="3"/>
+
+    <Label text="ConfirmPass"
+           GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+    <PasswordField fx:id="confirmPasswordField" onKeyReleased="#confirmPass"
+               GridPane.rowIndex="3" GridPane.columnIndex="2"/>
+    <Text text="" fx:id="confirmPasswordText"
+          GridPane.rowIndex="3" GridPane.columnIndex="3"/>
+
+    <Label text="Email"
+           GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+    <TextField fx:id="emailField" onKeyReleased="#validEmail"
+               GridPane.rowIndex="4" GridPane.columnIndex="2"/>
+    <Text text="" fx:id="emailText"
+          GridPane.rowIndex="4" GridPane.columnIndex="3"/>
+
+    <Label text="Name"
+           GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+    <TextField fx:id="name"
+               GridPane.rowIndex="5" GridPane.columnIndex="2"/>
+    <Text text=""
+          GridPane.rowIndex="5" GridPane.columnIndex="3"/>
+
+
+    <HBox spacing="10" alignment="bottom_right"
+          GridPane.columnIndex="2" GridPane.rowIndex="6">
+        <Button text="Log In"
+                onAction="#loginPressed"/>
+        <Button text="Sign In"
+                onAction="#signupPressed"/>
+    </HBox>
+
+</GridPane>
